@@ -1,0 +1,63 @@
+<div class="block_form">
+	<h2>Регистрация</h2>
+	<%= form_for @user do |f| %>
+
+		<div class="row">
+			<div class="col-20">Никнеим: </div>
+			<div class="col-5 nick_icons_field">
+				<i class="fas fa-check"></i> <i class="fas fa-exclamation"></i>
+			</div>
+			<div class="col-75">
+				<%= f.text_field :nick, required: true %>
+				<span class="error_form" id="nick_error_message"></span>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-20"> Имя: </div>
+			<div class="col-5 name_icons_field">
+				<i class="fas fa-check"></i> <i class="fas fa-exclamation"></i> 
+			</div>
+			<div class="col-75">
+				<%= f.text_field :name, required: true %>
+				<span class="error_form"" id="name_error_message"></span>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-20"> Фамилия: </div>
+			<div class="col-5 surname_icons_field">
+				<i class="fas fa-check"></i> <i class="fas fa-exclamation"></i> 
+			</div>
+			<div class="col-75">
+				<%= f.text_field :surname, required: true %>
+				<span class="error_form" id="surname_error_message"></span>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-20"> Электроная почта: </div>
+			<div class="col-5 email_icons_field">
+			 <i class="fas fa-check"></i> <i class="fas fa-exclamation"></i>
+			</div>
+			<div class="col-75">
+				<%= f.email_field :email, required: true %>
+				<span class="error_form" id="email_error_message"></span>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-20">	Пароль:	</div>
+			<div class="col-5 password_icons_field"> 
+				<i class="fas fa-check"></i> <i class="fas fa-exclamation"></i>
+			 </div>
+			<div class="col-75">
+					<%= f.password_field :password, required: true %>
+				<span class="error_form" id="password_error_message"></span>
+			</div>
+		</div>
+
+		<%= f.submit 'Готово', id: 'submit', disabled: true %>
+		<% end %>
+
+	</div>
