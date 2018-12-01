@@ -26,7 +26,8 @@ body{
 
 .col-20 {
   flex-basis: 20%;
-  justify-content: end;
+  text-align: right;
+  color: grey;
  }
 
  .col-75 {
@@ -34,12 +35,17 @@ body{
  }
 
  .col-5 {
- 	flex-basis: 5%;
+ 	flex-basis: 3%;
+ 	text-align: center;
  }
 
  .new_user .col-75 > input {
  	width: 50%;
  }
+
+#user_email, #user_password {
+	width: 25%;
+}
 
  .error_form,  .fa-exclamation { 
  	color: red; 
@@ -52,4 +58,15 @@ body{
 .block_form {
 	width: 75%;
 	margin-left: 5%;
+}
+
+.error_form {
+	margin-left: 1%;
+}
+
+#submit{ 
+	margin-top: 1%;
+	width: 130px;
+  height: 25px;
+  margin-left: 23%;
 }
